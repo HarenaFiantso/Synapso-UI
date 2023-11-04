@@ -36,6 +36,6 @@ This Git repository contains the front-end source code of our collaborative web 
 
 ## Collaboration
 
-We welcome contributions and feedback from the community. Feel free to create issues, propose new features, or submit pull requests to help us improve __Synapso__.
+We welcome contributions and feedback from the community. Feel free to create issues, propose new features, or submit pull requests to help us improve **Synapso**.
 
 ### Let's gooo🎈
