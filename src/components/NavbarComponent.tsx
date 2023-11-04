@@ -1,13 +1,14 @@
 'use client';
 
 import { Avatar, Dropdown, Navbar } from 'flowbite-react';
+import facebookLogo from "../assets/facebookLogo.png";
 
 export default function NavbarComponent() {
   return (
-    <Navbar fluid rounded>
-      <Navbar.Brand href="https://flowbite-react.com">
-        <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
+    <Navbar>
+      <Navbar.Brand href="#">
+        <img src={facebookLogo} className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
+        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Synapso</span>
       </Navbar.Brand>
       <div className="flex md:order-2">
         <Dropdown
@@ -18,25 +19,23 @@ export default function NavbarComponent() {
           }
         >
           <Dropdown.Header>
-            <span className="block text-sm">Bonnie Green</span>
-            <span className="block truncate text-sm font-medium">name@flowbite.com</span>
+            <span className="block text-sm">Fiantso Harena</span>
+            <span className="block truncate text-sm font-medium">fiantsorav@gmail.com</span>
           </Dropdown.Header>
-          <Dropdown.Item>Dashboard</Dropdown.Item>
-          <Dropdown.Item>Settings</Dropdown.Item>
-          <Dropdown.Item>Earnings</Dropdown.Item>
+          <Dropdown.Item>Settings & Privacy</Dropdown.Item>
+          <Dropdown.Item>Help & Support</Dropdown.Item>
           <Dropdown.Divider />
           <Dropdown.Item>Sign out</Dropdown.Item>
         </Dropdown>
         <Navbar.Toggle />
       </div>
-      <Navbar.Collapse>
-        <Navbar.Link href="#" active>
+      <Navbar.Collapse className='text-darkGrey hover:text-midBlue active:text-midBlue'>
+        <Navbar.Link href="#">
           Home
         </Navbar.Link>
-        <Navbar.Link href="#">About</Navbar.Link>
-        <Navbar.Link href="#">Services</Navbar.Link>
-        <Navbar.Link href="#">Pricing</Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
+        <Navbar.Link href="#">Profile</Navbar.Link>
+        <Navbar.Link href="#">Group</Navbar.Link>
+        <Navbar.Link href="#">Live</Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );
