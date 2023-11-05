@@ -17,16 +17,14 @@ const router = createBrowserRouter([
 
 interface AppState {
   mode: "dark" | "light";
-  /* We are gonna re-use this for the authentification with token system */
 }
 
 const initialAppState: AppState = {
   mode: "light",
-   /* We are gonna re-use this for the authentification with token system */
 };
 
 export default function App() {
-  const [appState] = useState<AppState>(initialAppState);
+  const [appState, setAppState] = useState<AppState>(initialAppState);
   const theme = useMemo(() => createTheme(themeSettings(appState.mode)), [appState.mode]);
 
   return (
