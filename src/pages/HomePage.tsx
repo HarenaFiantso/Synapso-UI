@@ -1,3 +1,6 @@
+import { Box } from "@mui/material";
+import NavbarComponent from "../components/NavbarComponent";
+
 export default function HomePage() {
-  return <div>Home</div>;
+  return <Box><NavbarComponent/></Box>;
 }
