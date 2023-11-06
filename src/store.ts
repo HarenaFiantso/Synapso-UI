@@ -1,16 +1,7 @@
-import { configureStore } from "@reduxjs/toolkit";
-import {
-  FLUSH,
-  PAUSE,
-  PERSIST,
-  PURGE,
-  REGISTER,
-  REHYDRATE,
-  PersistConfig,
-  persistReducer,
-} from "redux-persist";
-import storage from "redux-persist/lib/storage";
-import authReducer from "./reducers/authReducer";
+import { configureStore } from '@reduxjs/toolkit'
+import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, PersistConfig, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+import authReducer from './reducers/authReducer'
 
 /* - This code is configuring a Redux store with persistence using the "REDUX-PERSIST" library. This line is defining the configuration
  * for redux-persist. The "KEY" is the key for the persisted reducer, "STORAGE" is the storage engine to use (usually localStorage in a
@@ -26,17 +17,17 @@ import authReducer from "./reducers/authReducer";
  * CHECK DOCUMENTATION about react-redux, redux-persist for more explanation
  * */
 const persistConfig: PersistConfig<any> = {
-  key: "root",
+  key: 'root',
   storage,
-  version: 1,
-};
-const persistedReducer = persistReducer(persistConfig, authReducer);
+  version: 1
+}
+const persistedReducer = persistReducer(persistConfig, authReducer)
 export const store = configureStore({
   reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) =>
+  middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-      },
-    }),
-});
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
+      }
+    })
+})
