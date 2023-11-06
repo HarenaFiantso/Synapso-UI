@@ -1,10 +1,11 @@
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useMemo } from "react";
+import { themeSettings } from "./styles/Theme";
 
 import HomePage from "./pages/HomePage";
 import ErrorPage from "./pages/ErrorPage";
-import { useMemo, useState } from "react";
-import { themeSettings } from "./styles/Theme";
 
 /* Routing system of the Application */
 const router = createBrowserRouter([
@@ -15,18 +16,9 @@ const router = createBrowserRouter([
   },
 ]);
 
-interface AppState {
-  mode: "dark" | "light";
-}
-
-const initialAppState: AppState = {
-  mode: "light",
-};
-
 export default function App() {
-  const [appState, setAppState] = useState<AppState>(initialAppState);
-  const theme = useMemo(() => createTheme(themeSettings(appState.mode)), [appState.mode]);
-
+  const mode = useSelector((state: any) => state.mode);
+  const theme = useMemo(()=> createTheme(themeSettings(mode)), [mode]);
   return (
     <div className="App">
       <ThemeProvider theme={theme}>

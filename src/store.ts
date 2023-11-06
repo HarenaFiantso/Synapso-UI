@@ -4,9 +4,9 @@ import {
   PAUSE,
   PERSIST,
   PURGE,
-  PersistConfig,
   REGISTER,
   REHYDRATE,
+  PersistConfig,
   persistReducer,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
