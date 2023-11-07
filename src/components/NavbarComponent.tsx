@@ -10,7 +10,7 @@ export default function NavbarComponent() {
   /* Main configuration */
   const navigate = useNavigate()
   const dispatch = useDispatch()
-  const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false)
+  const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(true)
   const isNonMobileScreens = useMediaQuery('(min-width: 728px)')
 
   /* Theme configuration */
