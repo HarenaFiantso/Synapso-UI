@@ -10,7 +10,7 @@ export default function NavbarComponent() {
   /* Main configuration */
   const navigate = useNavigate()
   const dispatch = useDispatch()
-  const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(true)
+  const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false)
   const isNonMobileScreens = useMediaQuery('(min-width: 728px)')
 
   /* Theme configuration */
@@ -55,16 +55,12 @@ export default function NavbarComponent() {
           <IconButton onClick={() => dispatch(setMode())}>
             {theme.palette.mode === 'dark' ? <DarkMode sx={{ fontSize: '25px' }} /> : <LightMode sx={{ color: dark, fontSize: '25px' }} />}
           </IconButton>
-          <IconButton>
             <Badge badgeContent={17} color='error'>
-              <Message sx={{ fontSize: '25px' }} />
+              <Message sx={{ fontSize: '25px', cursor: 'pointer' }} />
             </Badge>
-          </IconButton>
-          <IconButton>
             <Badge badgeContent={17} color='error'>
-              <Notifications sx={{ fontSize: '25px' }} />
+              <Notifications sx={{ fontSize: '25px', cursor: 'pointer' }} />
             </Badge>
-          </IconButton>
           <Help sx={{ fontSize: '25px' }} />
           <FormControl variant='standard'>
             <Select
@@ -72,17 +68,16 @@ export default function NavbarComponent() {
               sx={{
                 bgColor: neutralLight,
                 width: '150px',
-                borderRadius: '0.25rem',
-                p: '0.25rem 1rem',
+                borderRadius: '.25rem',
+                p: '.25rem 1rem',
                 '& .MuiSvgIcon-root': {
-                  pr: '0.25rem',
+                  p: '0.25rem',
                   width: '3rem'
                 },
                 '& .MuiSelect-select:focus': {
                   backgroundColor: neutralLight
                 }
               }}
-              input={<InputBase />}
             >
               <MenuItem value='Fiantso Harena'>
                 <Typography>Fiantso Harena</Typography>
