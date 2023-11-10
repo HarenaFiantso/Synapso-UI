@@ -39,7 +39,7 @@ export default function NavbarComponent() {
           Synapso
         </Typography>
 
-        {isMobileMenuToggled && (
+        {isNonMobileScreens && (
           <FlexBetween bgcolor={neutralLight} borderRadius='9px' gap='3rem' padding='.1rem 1.5rem'>
             <InputBase placeholder='Search...' />
             <IconButton>
@@ -106,8 +106,12 @@ export default function NavbarComponent() {
             <IconButton onClick={() => dispatch(setMode())} sx={{ fontSize: '25px' }}>
               {theme.palette.mode === 'dark' ? <DarkMode sx={{ fontSize: '25px' }} /> : <LightMode sx={{ color: dark, fontSize: '25px' }} />}
             </IconButton>
-            <Message sx={{ fontSize: '25px' }} />
-            <Notifications sx={{ fontSize: '25px' }} />
+            <Badge badgeContent={17} color='error'>
+              <Message sx={{ fontSize: '25px' }} />
+            </Badge>
+            <Badge badgeContent={17} color='error'>
+              <Notifications sx={{ fontSize: '25px' }} />
+            </Badge>
             <Help sx={{ fontSize: '25px' }} />
             <FormControl variant='standard'>
               <Select
