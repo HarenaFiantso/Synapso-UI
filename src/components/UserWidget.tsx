@@ -2,6 +2,7 @@ import { Box, Typography, useTheme } from '@mui/material'
 import FlexBetween from '../styles/FlexBetween'
 import WidgetWrapper from '../styles/WidgetWrapper'
 import UserImage from './UserImage'
+import { ManageAccountsOutlined } from '@mui/icons-material'
 
 export default function UserWidget() {
   /* Theme configuration */
@@ -31,6 +32,7 @@ export default function UserWidget() {
             <Typography color={medium}>69 friends</Typography>
           </Box>
         </FlexBetween>
+        <ManageAccountsOutlined />
       </FlexBetween>
     </WidgetWrapper>
   )
