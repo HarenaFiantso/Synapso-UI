@@ -2,7 +2,7 @@ import { Box, Divider, Typography, useTheme } from '@mui/material'
 import FlexBetween from '../styles/FlexBetween'
 import WidgetWrapper from '../styles/WidgetWrapper'
 import UserImage from './UserImage'
-import { EditOutlined, Instagram, LinkedIn, LocationOnOutlined, ManageAccountsOutlined, Twitter, WorkOutlineOutlined } from '@mui/icons-material'
+import { EditOutlined, Instagram, LocationOnOutlined, ManageAccountsOutlined, Twitter, WorkOutlineOutlined } from '@mui/icons-material'
 
 export default function UserWidget() {
   /* Theme configuration */
