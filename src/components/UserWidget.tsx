@@ -2,7 +2,7 @@ import { Box, Divider, Typography, useTheme } from '@mui/material'
 import FlexBetween from '../styles/FlexBetween'
 import WidgetWrapper from '../styles/WidgetWrapper'
 import UserImage from './UserImage'
-import { LocationOnOutlined, ManageAccountsOutlined, WorkOutlineOutlined } from '@mui/icons-material'
+import { EditOutlined, Instagram, LinkedIn, LocationOnOutlined, ManageAccountsOutlined, Twitter, WorkOutlineOutlined } from '@mui/icons-material'
 
 export default function UserWidget() {
   /* Theme configuration */
@@ -66,6 +66,39 @@ export default function UserWidget() {
           <Typography color={main} fontWeight='500'>
             69k
           </Typography>
+        </FlexBetween>
+      </Box>
+
+      <Divider />
+
+      {/* Fourth row */}
+      <Box p='1rem 0'>
+        <Typography fontSize='.8rem' color={main} fontWeight='700' mb='1rem'>
+          Social Media profiles
+        </Typography>
+        <FlexBetween gap='1rem' mb='0.5rem'>
+          <FlexBetween gap='1rem'>
+            <Twitter />
+            <Box>
+              <Typography color={main} fontWeight='500'>
+                Twitter
+              </Typography>
+              <Typography color={medium}>Fiantso Harena</Typography>
+            </Box>
+          </FlexBetween>
+          <EditOutlined sx={{ color: main }} />
+        </FlexBetween>
+        <FlexBetween gap='1rem' mb='0.5rem'>
+          <FlexBetween gap='1rem'>
+            <Instagram />
+            <Box>
+              <Typography color={main} fontWeight='500'>
+                Instagram
+              </Typography>
+              <Typography color={medium}>fiantsooo</Typography>
+            </Box>
+          </FlexBetween>
+          <EditOutlined sx={{ color: main }} />
         </FlexBetween>
       </Box>
     </WidgetWrapper>
