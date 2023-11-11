@@ -54,6 +54,20 @@ export default function UserWidget() {
       <Divider />
 
       {/* Third rows */}
+      <Box p='1rem 0'>
+        <FlexBetween mb='.5rem'>
+          <Typography color={medium}>Profile viewed : </Typography>
+          <Typography color={main} fontWeight='500'>
+            69
+          </Typography>
+        </FlexBetween>
+        <FlexBetween>
+          <Typography color={medium}>Post impressions : </Typography>
+          <Typography color={main} fontWeight='500'>
+            69k
+          </Typography>
+        </FlexBetween>
+      </Box>
     </WidgetWrapper>
   )
 }
