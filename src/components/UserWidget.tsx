@@ -42,14 +42,18 @@ export default function UserWidget() {
       {/* Second row */}
       <Box p='1rem 0'>
         <Box display='flex' alignItems='center' gap='1rem' mb='.5rem'>
-          <LocationOnOutlined fontSize='large' sx={{ color: main }} />
+          <LocationOnOutlined fontSize='medium' sx={{ color: main }} />
           <Typography color={medium}>Antananarivo Madagascar</Typography>
         </Box>
         <Box display='flex' alignItems='center' gap='1rem' mb='.5rem'>
-          <WorkOutlineOutlined fontSize='large' sx={{ color: main }} />
+          <WorkOutlineOutlined fontSize='medium' sx={{ color: main }} />
           <Typography color={medium}>Je ne travaille pas je suis une princesse</Typography>
         </Box>
       </Box>
+
+      <Divider />
+
+      {/* Third rows */}
     </WidgetWrapper>
   )
 }
