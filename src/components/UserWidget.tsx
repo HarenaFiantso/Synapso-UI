@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from '@mui/material'
+import { Box, Divider, Typography, useTheme } from '@mui/material'
 import FlexBetween from '../styles/FlexBetween'
 import WidgetWrapper from '../styles/WidgetWrapper'
 import UserImage from './UserImage'
@@ -12,6 +12,8 @@ export default function UserWidget() {
 
   return (
     <WidgetWrapper>
+
+      {/* First row */}
       <FlexBetween gap='.5rem' pb='1.1rem'>
         <FlexBetween gap='1rem'>
           <UserImage />
@@ -34,6 +36,10 @@ export default function UserWidget() {
         </FlexBetween>
         <ManageAccountsOutlined />
       </FlexBetween>
+
+      <Divider />
+
+      {/* Second row */}
     </WidgetWrapper>
   )
 }
