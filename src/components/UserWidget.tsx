@@ -1,6 +1,7 @@
+import { Box, Typography, useTheme } from '@mui/material'
 import FlexBetween from '../styles/FlexBetween'
 import WidgetWrapper from '../styles/WidgetWrapper'
-import { Box, Typography, useTheme } from '@mui/material'
+import UserImage from './UserImage'
 
 export default function UserWidget() {
   /* Theme configuration */
@@ -12,7 +13,7 @@ export default function UserWidget() {
     <WidgetWrapper>
       <FlexBetween gap='.5rem' pb='1.1rem'>
         <FlexBetween gap='1rem'>
-          Ato tokony misy sary
+          <UserImage />
           <Box>
             <Typography
               variant='h4'
